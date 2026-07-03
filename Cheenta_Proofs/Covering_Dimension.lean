@@ -18,8 +18,8 @@ variable {X : Type u} [TopologicalSpace X]
 
 def Covering_Dimension {X : Type u} [TopologicalSpace X] (n : ℕ) : Prop :=
   ∀ (ι : Type w) (u : ι → Set X),
-    TopologicalSpace.IsOpenCover u →
+    (∀ i, IsOpen (u i)) ∧ (⋃ i, u i = Set.univ) →
     ∃ (κ : Type w) (v : κ → Set X),
-      TopologicalSpace.IsOpenCover v ∧
+      (∀ k, IsOpen (v k)) ∧ (⋃ k, v k = Set.univ) ∧
       Refines v u ∧
       HasOrderLENiranjan v n
