@@ -1,7 +1,7 @@
 import Mathlib.Data.Option.Basic
 import Mathlib.Topology.Separation.Regular
-import Mathlib.Topology.Basic
 import Mathlib.Topology.Constructions
+import Mathlib.Topology.Sets.OpenCover
 import Cheenta_Proofs.BasicLemmasforCD
 
 /-
@@ -16,18 +16,10 @@ universe u w
 
 variable {X : Type u} [TopologicalSpace X]
 
-/- def Covering_Dimension (n : ℕ) : Prop :=
-  ∀ (ι : Type*) [Fintype ι] (u : ι → Set X),
-    IsOpenCoverGeneral u →
-    ∃ (κ : Type*) (_ : Fintype κ) (v : κ → Set X),
-      IsOpenCoverGeneral v ∧
-      RefinesGeneral v u ∧
-      HasOrderLEGeneral v n -/
-
 def Covering_Dimension {X : Type u} [TopologicalSpace X] (n : ℕ) : Prop :=
   ∀ (ι : Type w) (u : ι → Set X),
-    IsOpenCover u →
+    TopologicalSpace.IsOpenCover u →
     ∃ (κ : Type w) (v : κ → Set X),
-      IsOpenCover v ∧
+      TopologicalSpace.IsOpenCover v ∧
       Refines v u ∧
       HasOrderLENiranjan v n

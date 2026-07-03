@@ -1,17 +1,12 @@
 {"synthetic": false,
  "schemaVersion": "2025-09-10",
  "outputs":
-<<<<<<< Updated upstream
- {"o": ["ee2361d64baac54e.olean"],
-  "i": "bdb03be3d89cbd93.ilean",
-=======
  {"o": ["3eb885bf34e196f0.olean"],
   "i": "9b486dd500c02199.ilean",
->>>>>>> Stashed changes
   "c": "195d01efbc7dfdb8.c"},
  "log":
  [{"message":
-   ".> LEAN_PATH=C:\\Users\\HP\\Desktop\\Lean4\\GlimpseOfLean-Cheenta\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;C:\\Users\\HP\\Desktop\\Lean4\\GlimpseOfLean-Cheenta\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;C:\\Users\\HP\\Desktop\\Lean4\\GlimpseOfLean-Cheenta\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean;C:\\Users\\HP\\Desktop\\Lean4\\GlimpseOfLean-Cheenta\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;C:\\Users\\HP\\Desktop\\Lean4\\GlimpseOfLean-Cheenta\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;C:\\Users\\HP\\Desktop\\Lean4\\GlimpseOfLean-Cheenta\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;C:\\Users\\HP\\Desktop\\Lean4\\GlimpseOfLean-Cheenta\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;C:\\Users\\HP\\Desktop\\Lean4\\GlimpseOfLean-Cheenta\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;C:\\Users\\HP\\Desktop\\Lean4\\GlimpseOfLean-Cheenta\\.lake\\packages\\mathlib\\.lake\\build\\lib\\lean;C:\\Users\\HP\\Desktop\\Lean4\\GlimpseOfLean-Cheenta\\.lake\\build\\lib\\lean c:\\Users\\HP\\.elan\\toolchains\\leanprover--lean4---v4.27.0\\bin\\lean.exe C:\\Users\\HP\\Desktop\\Lean4\\GlimpseOfLean-Cheenta\\Cheenta_Proofs\\BasicLemmasforCD.lean -o C:\\Users\\HP\\Desktop\\Lean4\\GlimpseOfLean-Cheenta\\.lake\\build\\lib\\lean\\Cheenta_Proofs\\BasicLemmasforCD.olean -i C:\\Users\\HP\\Desktop\\Lean4\\GlimpseOfLean-Cheenta\\.lake\\build\\lib\\lean\\Cheenta_Proofs\\BasicLemmasforCD.ilean -c C:\\Users\\HP\\Desktop\\Lean4\\GlimpseOfLean-Cheenta\\.lake\\build\\ir\\Cheenta_Proofs\\BasicLemmasforCD.c --setup C:\\Users\\HP\\Desktop\\Lean4\\GlimpseOfLean-Cheenta\\.lake\\build\\ir\\Cheenta_Proofs\\BasicLemmasforCD.setup.json --json",
+   ".> LEAN_PATH=C:\\Users\\niran\\Desktop\\GlimpseOfLean-Cheenta\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;C:\\Users\\niran\\Desktop\\GlimpseOfLean-Cheenta\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;C:\\Users\\niran\\Desktop\\GlimpseOfLean-Cheenta\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean;C:\\Users\\niran\\Desktop\\GlimpseOfLean-Cheenta\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;C:\\Users\\niran\\Desktop\\GlimpseOfLean-Cheenta\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;C:\\Users\\niran\\Desktop\\GlimpseOfLean-Cheenta\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;C:\\Users\\niran\\Desktop\\GlimpseOfLean-Cheenta\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;C:\\Users\\niran\\Desktop\\GlimpseOfLean-Cheenta\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;C:\\Users\\niran\\Desktop\\GlimpseOfLean-Cheenta\\.lake\\packages\\mathlib\\.lake\\build\\lib\\lean;C:\\Users\\niran\\Desktop\\GlimpseOfLean-Cheenta\\.lake\\build\\lib\\lean c:\\Users\\niran\\.elan\\toolchains\\leanprover--lean4---v4.27.0\\bin\\lean.exe C:\\Users\\niran\\Desktop\\GlimpseOfLean-Cheenta\\Cheenta_Proofs\\BasicLemmasforCD.lean -o C:\\Users\\niran\\Desktop\\GlimpseOfLean-Cheenta\\.lake\\build\\lib\\lean\\Cheenta_Proofs\\BasicLemmasforCD.olean -i C:\\Users\\niran\\Desktop\\GlimpseOfLean-Cheenta\\.lake\\build\\lib\\lean\\Cheenta_Proofs\\BasicLemmasforCD.ilean -c C:\\Users\\niran\\Desktop\\GlimpseOfLean-Cheenta\\.lake\\build\\ir\\Cheenta_Proofs\\BasicLemmasforCD.c --setup C:\\Users\\niran\\Desktop\\GlimpseOfLean-Cheenta\\.lake\\build\\ir\\Cheenta_Proofs\\BasicLemmasforCD.setup.json --json",
    "level": "trace"}],
  "inputs":
  [["Cheenta_Proofs.BasicLemmasforCD:deps",
@@ -50,19 +45,10 @@
       ["module plugins", "00000000000006bb"]]]]],
   ["Lean 4.27.0, commit db93fe1608548721853390a10cd40580fe7d22ae",
    "9a2be90fd35343e5"],
-<<<<<<< Updated upstream
-  ["C:\\Users\\HP\\Desktop\\Lean4\\GlimpseOfLean-Cheenta\\Cheenta_Proofs\\BasicLemmasforCD.lean",
-   "e9f50555aa76fc5a"],
-=======
   ["C:\\Users\\niran\\Desktop\\GlimpseOfLean-Cheenta\\Cheenta_Proofs\\BasicLemmasforCD.lean",
    "f51528ed26888234"],
->>>>>>> Stashed changes
   ["options",
    [["-Dpp.unicode.fun=true", "9b94070140457fab"],
     ["-DautoImplicit=true", "ce2576f7641d928a"]]],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
-<<<<<<< Updated upstream
- "depHash": "371a51ae65c00443"}
-=======
  "depHash": "539ef367f4dcc973"}
->>>>>>> Stashed changes
