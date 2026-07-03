@@ -23,3 +23,12 @@ def Covering_Dimension {X : Type u} [TopologicalSpace X] (n : ℕ) : Prop :=
       (∀ k, IsOpen (v k)) ∧ (⋃ k, v k = Set.univ) ∧
       Refines v u ∧
       HasOrderLENiranjan v n
+
+
+def Covering_Dimension_2 {X : Type u} [TopologicalSpace X] (n : ℕ) : Prop :=
+  ∀ (ι : Type w) (u : ι → TopologicalSpace.Opens X),
+    TopologicalSpace.IsOpenCover u →
+    ∃ (κ : Type w) (v : κ → TopologicalSpace.Opens X),
+      TopologicalSpace.IsOpenCover v ∧
+      Refines (fun k => (v k : Set X)) (fun i => (u i : Set X)) ∧
+      HasOrderLEShravas (fun k => (v k : Set X)) n
