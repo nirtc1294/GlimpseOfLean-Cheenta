@@ -8,12 +8,13 @@ variable {X : Type}[TopologicalSpace X]
 
 def DimLe (S : Set X) : ℕ → Prop
   | 0 => ∀ {ι : Type} (C : ι → Set X), IsOpenCover C →
-      ∃ {κ : Type} (D : κ → Set X), IsOpenCover D ∧ Refines D C ∧ HasOrderLE D 0
+      ∃ (κ : Type) (D : κ → Set X), IsOpenCover D ∧ Refines D C ∧ HasOrderLEShravas D 0
   | n + 1 => ∃ A B : Set X, S = A ∪ B ∧ DimLe A 0 ∧ DimLe B n
 
 lemma dimLe_succ_split {S : Set X} {n : ℕ} :
   DimLe S (n + 1) ↔ ∃ A B : Set X, S = A ∪ B ∧ DimLe A 0 ∧ DimLe B n := by
-  rfl
+  rw [DimLe]
+
 
 lemma dimension_decomposition_set (S : Set X) (n : ℕ) :
   DimLe S n ↔ ∃ Xs : ℕ → Set X, S = (⋃ i ≤ n, Xs i) ∧ ∀ i ≤ n, DimLe (Xs i) 0 := by
