@@ -21,7 +21,7 @@ def multiplicity
 def HasOrderLENiranjan {κ : Type*} (v : κ → Set X) (n : ℕ) : Prop :=
   ∀ (f : Fin (n + 2) → κ), Function.Injective f → (⋂ i, v (f i)) = ∅
 
- def HasOrderLEShravas {κ : Type*} (v : κ → Set X) (n : ℕ) : Prop :=
+ def HasOrderLE {κ : Type*} (v : κ → Set X) (n : ℕ) : Prop :=
   ∀ s : Finset κ,
     s.card = n + 2 →
     (⋂ k ∈ (↑s : Set κ), v k) = ∅
@@ -71,7 +71,7 @@ lemma refines_trans
 
 omit [TopologicalSpace X] in
 lemma trivialCover_order :
-    HasOrderLEShravas (trivialCover : Unit → Set X) 0 := by
+    HasOrderLE (trivialCover : Unit → Set X) 0 := by
   classical
   intro s hs
   have hcard : s.card ≤ 1 := by

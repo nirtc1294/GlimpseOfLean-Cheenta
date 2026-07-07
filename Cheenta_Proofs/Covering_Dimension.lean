@@ -22,7 +22,7 @@ def Covering_Dimension {X : Type u} [TopologicalSpace X] (n : ℕ) : Prop :=
     ∃ (κ : Type w) (v : κ → Set X),
       (∀ k, IsOpen (v k)) ∧ (⋃ k, v k = Set.univ) ∧
       Refines v u ∧
-      HasOrderLENiranjan v n
+      HasOrderLE v n
 
 
 def Covering_Dimension_2 {X : Type u} [TopologicalSpace X] (n : ℕ) : Prop :=
