@@ -77,7 +77,6 @@ theorem connected_prod {X₁ X₂ : Type*} [TopologicalSpace X₁] [TopologicalS
         simp [S] at hs
         rcases hs with rfl | rfl <;> simp⟩
 
-  -- ↓↓↓ THIS IS THE FIXED PART ↓↓↓
   let crosses := fun c : X₁ => (({c} : Set X₁) ×ˢ (Set.univ : Set X₂) ∪ (Set.univ : Set X₁) ×ˢ ({x₂} : Set X₂) : Set (X₁ × X₂))
 
   have cover : ⋃₀ (Set.range crosses) = Set.univ := by
