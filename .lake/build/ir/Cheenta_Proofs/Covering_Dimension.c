@@ -1,6 +1,6 @@
 // Lean compiler output
 // Module: Cheenta_Proofs.Covering_Dimension
-// Imports: public import Init public import Mathlib.Data.Option.Basic public import Mathlib.Topology.Separation.Regular public import Mathlib.Topology.Basic public import Mathlib.Topology.Constructions public import Cheenta_Proofs.BasicLemmasforCD
+// Imports: public import Init public import Mathlib.Data.Option.Basic public import Mathlib.Topology.Separation.Regular public import Mathlib.Topology.Constructions public import Mathlib.Topology.Sets.OpenCover public import Cheenta_Proofs.BasicLemmasforCD
 #include <lean/lean.h>
 #if defined(__clang__)
 #pragma clang diagnostic ignored "-Wunused-parameter"
@@ -16,8 +16,8 @@ extern "C" {
 lean_object* initialize_Init(uint8_t builtin);
 lean_object* initialize_mathlib_Mathlib_Data_Option_Basic(uint8_t builtin);
 lean_object* initialize_mathlib_Mathlib_Topology_Separation_Regular(uint8_t builtin);
-lean_object* initialize_mathlib_Mathlib_Topology_Basic(uint8_t builtin);
 lean_object* initialize_mathlib_Mathlib_Topology_Constructions(uint8_t builtin);
+lean_object* initialize_mathlib_Mathlib_Topology_Sets_OpenCover(uint8_t builtin);
 lean_object* initialize_glimpseOfLean_Cheenta__Proofs_BasicLemmasforCD(uint8_t builtin);
 static bool _G_initialized = false;
 LEAN_EXPORT lean_object* initialize_glimpseOfLean_Cheenta__Proofs_Covering__Dimension(uint8_t builtin) {
@@ -33,10 +33,10 @@ lean_dec_ref(res);
 res = initialize_mathlib_Mathlib_Topology_Separation_Regular(builtin);
 if (lean_io_result_is_error(res)) return res;
 lean_dec_ref(res);
-res = initialize_mathlib_Mathlib_Topology_Basic(builtin);
+res = initialize_mathlib_Mathlib_Topology_Constructions(builtin);
 if (lean_io_result_is_error(res)) return res;
 lean_dec_ref(res);
-res = initialize_mathlib_Mathlib_Topology_Constructions(builtin);
+res = initialize_mathlib_Mathlib_Topology_Sets_OpenCover(builtin);
 if (lean_io_result_is_error(res)) return res;
 lean_dec_ref(res);
 res = initialize_glimpseOfLean_Cheenta__Proofs_BasicLemmasforCD(builtin);

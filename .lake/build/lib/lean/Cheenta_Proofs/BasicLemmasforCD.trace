@@ -1,8 +1,8 @@
 {"synthetic": false,
  "schemaVersion": "2025-09-10",
  "outputs":
- {"o": ["3eb885bf34e196f0.olean"],
-  "i": "9b486dd500c02199.ilean",
+ {"o": ["d2399f39a9059eb8.olean"],
+  "i": "7a90324f6d2cd5c1.ilean",
   "c": "195d01efbc7dfdb8.c"},
  "log":
  [{"message":
@@ -46,9 +46,9 @@
   ["Lean 4.27.0, commit db93fe1608548721853390a10cd40580fe7d22ae",
    "9a2be90fd35343e5"],
   ["C:\\Users\\niran\\Desktop\\GlimpseOfLean-Cheenta\\Cheenta_Proofs\\BasicLemmasforCD.lean",
-   "f51528ed26888234"],
+   "dad559f3c275a9d4"],
   ["options",
    [["-Dpp.unicode.fun=true", "9b94070140457fab"],
     ["-DautoImplicit=true", "ce2576f7641d928a"]]],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "539ef367f4dcc973"}
+ "depHash": "a663dc76ec481004"}
