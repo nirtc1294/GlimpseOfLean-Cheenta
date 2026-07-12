@@ -41,7 +41,7 @@ theorem dim0_iff_finite_clopen_partition [NormalSpace X] [Nonempty X] :
           sorry
         rw [h_compl]
         exact isOpen_biUnion (fun j _ => hv_cover j)
-      exact ⟨h_is_open, h_is_closed⟩
+      exact ⟨h_is_open, h_is_closed⟩s
     · intro k₁ k₂ hne
       sorry
   · intro h_partition
