@@ -2,62 +2,50 @@ import Mathlib.Data.Option.Basic
 import Mathlib.Topology.Separation.Regular
 import Mathlib.Topology.Basic
 import Mathlib.Topology.Constructions
-import Cheenta_Proofs.BasicLemmasforCD
 import Mathlib.Topology.Sets.OpenCover
+import Cheenta_Proofs.BasicLemmasforCD
+import Cheenta_Proofs.Covering_Dimension
+import Mathlib.Topology.Sets.Opens
 /-
 Copyright (c) 2026 Cheenta Lean Project. All rights reserved.
 Authors : Adhiraj Anand, Niranjan Rao, Parum Sarda, Shravas Matta, Shreesh Nayak, Shreya Iyer
 -/
 
+set_option linter.unusedVariables false
+
 public section
-open Set
-universe u v
+open Set Filter Function Topology
+
+universe u
 variable {X : Type u} [TopologicalSpace X]
 
-theorem dim0_iff_disjoint_clopen_refinement_general
-    {ι : Type*} (u : ι → Set X) (huo : ∀ i, IsOpen (u i)) (hucov : ⋃ i, u i = univ) :
-    (∃ (κ : Type) (v : κ → Set X), (∀ k, IsOpen (v k)) ∧ (⋃ k, v k = univ) ∧ Refines v u ∧ HasOrderLE v 0) ↔
-    (∃ (κ : Type) (v : κ → Set X), (∀ k, IsOpen (v k)) ∧ (⋃ k, v k = univ) ∧ Refines v u ∧ ∀ k₁ k₂, k₁ ≠ k₂ → v k₁ ∩ v k₂ = ∅) := by
-    constructor
-    · rintro ⟨κ, v, hvopen, hvcov, href, hord⟩
-      refine ⟨κ, v, hvopen, hvcov, href, ?_⟩
-      intro k₁ k₂ hne
-      have hle : v k₁ ∩ v k₂ = ∅ := by
-        exact hord.1 k₁ k₂ hne
-      exact hle
-    · rintro ⟨κ, v, hvopen, hvcov, href, hdisj⟩
-      rcases isEmpty_or_nonempty κ with hκ | hne
-      · have hX : IsEmpty X := ⟨fun x => by
-          have h := hvcov ▸ Set.mem_univ x
-          rwa [Set.iUnion_eq_empty.mpr fun k => hκ.elim k] at h⟩
-        exact ⟨κ, v, hvopen, hvcov, href, fun s _ => eq_empty_of_subset_empty fun x _ => hX.elim x⟩
-      · refine ⟨Sum κ ℕ, Sum.elim v (fun _ => ∅), ?_, ?_, ?_⟩
-        · constructor
-          · rintro (k | _)
-            · exact hvopen k
-            · exact isOpen_empty
-          · simp only [Set.eq_univ_iff_forall, Set.mem_iUnion, Sum.exists, Sum.elim_inl,
-                       Sum.elim_inr, Set.mem_empty_iff_false]
-            intro x
-            have ⟨k, hk⟩ := Set.mem_iUnion.mp (hucov ▸ Set.mem_univ x)
-            exact Or.inl ⟨k, hk⟩
-        · rintro (k | _)
-          · exact href k
-          · exact ⟨(href hne.some).choose, Set.empty_subset _⟩
-        · unfold HasOrderEq
-          intro s hf
-          by_cases hs : ∃ k₁ ∈ s, ∃ k₂ ∈ s, k₁ ≠ k₂
-          · obtain ⟨k₁, hk₁, k₂, hk₂, hne⟩ := hs
-            apply eq_empty_of_subset_empty; intro x hx
-            simp only [Set.mem_iInter] at hx
-            have hd : Sum.elim v (fun _ => ∅) k₁ ∩ Sum.elim v (fun _ => ∅) k₂ = ∅ :=
-              match k₁, k₂ with
-              | .inl j₁, .inl j₂ => hdisj j₁ j₂ (mt (congrArg Sum.inl) hne)
-              | .inl _, .inr _ | .inr _, _ => by simp
-            exact hd ▸ ⟨hx k₁ hk₁, hx k₂ hk₂⟩
-          · push_neg at hs
-            exact absurd
-              (Sum.inr_injective (hs _
-                (hf Sum.inr Sum.inr_injective 0 (by norm_num)) _
-                (hf Sum.inr Sum.inr_injective 1 (by norm_num))))
-              (by norm_num)
+
+theorem dim0_iff_finite_clopen_partition [NormalSpace X] [Nonempty X] :
+  Covering_Dimension (X := X) 0 ↔
+  ∀ (m : ℕ) (u : {i : ℕ // i < m} → TopologicalSpace.Opens X),
+  TopologicalSpace.IsOpenCover u →
+  ∃ (m' : ℕ) (v : {i : ℕ // i < m'} → TopologicalSpace.Opens X),
+  TopologicalSpace.IsOpenCover v ∧
+  Refines (fun k => (v k : Set X)) (fun i => (u i : Set X)) ∧
+  (∀ k, IsClopen (v k : Set X)) ∧
+  (∀ k₁ k₂, k₁ ≠ k₂ → (v k₁ : Set X) ∩ (v k₂ : Set X) = ∅) := by
+  constructor
+  · intro h_dim m u hu_cover
+    obtain ⟨m', v, hv_cover, hv_ref, hv_order⟩ := h_dim m u hu_cover
+    use m', v
+    refine ⟨hv_cover, hv_ref, ?_, ?_⟩
+    · intro k
+      have h_is_open : IsOpen (v k : Set X) := hv_cover k
+      have h_is_closed : IsClosed (v k : Set X) := by
+        rw [← isOpen_compl_iff]
+        have h_compl : (v k : Set X)ᶜ = ⋃ (j : {i // i < m'}) (_ : j ≠ k), (v j : Set X) := by
+          sorry
+        rw [h_compl]
+        exact isOpen_biUnion (fun j _ => hv_cover j)
+      exact ⟨h_is_open, h_is_closed⟩
+    · intro k₁ k₂ hne
+      sorry
+  · intro h_partition m u hu_cover
+    rcases h_partition m u hu_cover with ⟨m', v, hv_cover, hv_ref, hv_clopen, hv_disj⟩
+    use m', v
+    refine ⟨hv_cover, hv_ref, hv_clopen, hv_disj⟩

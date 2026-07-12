@@ -6,10 +6,14 @@ import Mathlib.Topology.Order.IntermediateValue
 import Mathlib.Data.Real.Basic
 import Mathlib.Topology.Sets.OpenCover
 
+/-
+Copyright (c) 2026 Cheenta Lean Project. All rights reserved.
+Authors : Adhiraj Anand, Niranjan Rao, Parum Sarda, Shravas Matta, Shreesh Nayak, Shreya Iyer
+-/
+
+
 open Set
-
 universe u v
-
 variable {X : Type u} [TopologicalSpace X]
 
 def multiplicity
@@ -26,10 +30,10 @@ def HasOrderLENiranjan {κ : Type*} (v : κ → Set X) (n : ℕ) : Prop :=
     s.card = n + 2 →
     (⋂ k ∈ (↑s : Set κ), v k) = ∅
 
-def IsOpenCover {ι : Type*}
+/-def IsOpenCover {ι : Type*}
  (u : ι → Set X) : Prop :=
  (∀ i, IsOpen (u i)) ∧
- (⋃ i, u i) = univ
+ (⋃ i, u i) = univ-/
 
 def Refines {ι : Type*}
   {κ : Type*} (v : κ → Set X)
