@@ -30,11 +30,6 @@ def HasOrderLENiranjan {κ : Type*} (v : κ → Set X) (n : ℕ) : Prop :=
     s.card = n + 2 →
     (⋂ k ∈ (↑s : Set κ), v k) = ∅
 
-/-def IsOpenCover {ι : Type*}
- (u : ι → Set X) : Prop :=
- (∀ i, IsOpen (u i)) ∧
- (⋃ i, u i) = univ-/
-
 def Refines {ι : Type*}
   {κ : Type*} (v : κ → Set X)
   (u : ι → Set X) : Prop :=
