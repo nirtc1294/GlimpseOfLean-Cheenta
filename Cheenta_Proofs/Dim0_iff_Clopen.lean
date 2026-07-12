@@ -31,9 +31,8 @@ theorem dim0_iff_finite_clopen_partition [NormalSpace X] [Nonempty X] :
   (∀ k₁ k₂, k₁ ≠ k₂ → (v k₁ : Set X) ∩ (v k₂ : Set X) = ∅) := by
   constructor
   · intro h_dim m u hu_cover
-    obtain ⟨m', v, hv_cover, hv_ref, hv_order⟩ := h_dim m u hu_cover
-    use m', v
-    refine ⟨hv_cover, hv_ref, ?_, ?_⟩
+    obtain ⟨m' : ℕ, v, hv_cover, hv_ref, hv_order⟩ := h_dim m u hu_cover
+    refine ⟨m', v, hv_cover, hv_ref, ?_, ?_⟩
     · intro k
       have h_is_open : IsOpen (v k : Set X) := hv_cover k
       have h_is_closed : IsClosed (v k : Set X) := by
@@ -45,7 +44,6 @@ theorem dim0_iff_finite_clopen_partition [NormalSpace X] [Nonempty X] :
       exact ⟨h_is_open, h_is_closed⟩
     · intro k₁ k₂ hne
       sorry
-  · intro h_partition m u hu_cover
-    rcases h_partition m u hu_cover with ⟨m', v, hv_cover, hv_ref, hv_clopen, hv_disj⟩
-    use m', v
-    refine ⟨hv_cover, hv_ref, hv_clopen, hv_disj⟩
+  · intro h_partition
+    intro m u hu_cover
+    exact h_partition m u hu_cover
