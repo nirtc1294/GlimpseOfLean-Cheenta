@@ -17,7 +17,7 @@ public section
 open Set
 variable {X : Type u} [TopologicalSpace X]
 
-universe v -- Removed `u` to avoid the "already declared" clash
+universe v
 
 variable {X : Type u} [TopologicalSpace X]
 
