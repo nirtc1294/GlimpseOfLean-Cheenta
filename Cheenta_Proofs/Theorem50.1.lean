@@ -22,9 +22,9 @@ universe v
 variable {X : Type u} [TopologicalSpace X]
 
 theorem subspaceOfDimension
-  {Y : Set X} (hY : IsClosed Y) {n : ℕ} (hdim : Covering_Dimension_2.{u, v} (X := X) n) :
-  Covering_Dimension_2.{u, v} (X := ↥Y) n := by
-  unfold Covering_Dimension_2
+  {Y : Set X} (hY : IsClosed Y) {n : ℕ} (hdim : Covering_Dimension.{u, v} (X := X) n) :
+  Covering_Dimension.{u, v} (X := ↥Y) n := by
+  unfold Covering_Dimension
   intro ι u hu
   choose U hU_open hU_eq using fun i => isOpen_induced_iff.mp (u i).isOpen
 

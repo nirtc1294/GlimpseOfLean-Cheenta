@@ -17,15 +17,6 @@ universe u w
 variable {X : Type u} [TopologicalSpace X]
 
 def Covering_Dimension {X : Type u} [TopologicalSpace X] (n : ℕ) : Prop :=
-  ∀ (ι : Type w) (u : ι → Set X),
-    (∀ i, IsOpen (u i)) ∧ (⋃ i, u i = Set.univ) →
-    ∃ (κ : Type w) (v : κ → Set X),
-      (∀ k, IsOpen (v k)) ∧ (⋃ k, v k = Set.univ) ∧
-      Refines v u ∧
-      HasOrderLE v n
-
-
-def Covering_Dimension_2 {X : Type u} [TopologicalSpace X] (n : ℕ) : Prop :=
   ∀ (ι : Type w) (u : ι → TopologicalSpace.Opens X),
     TopologicalSpace.IsOpenCover u →
     ∃ (κ : Type w) (v : κ → TopologicalSpace.Opens X),
