@@ -22,13 +22,15 @@ def multiplicity
   ∀ (s : Set ι), (∀ i ∈ s, x ∈ u i) →
     (∀ (f : ℕ → ι), (∀ n, f n ∈ s) → ¬ Function.Injective f)
 
-def HasOrderLENiranjan {κ : Type*} (v : κ → Set X) (n : ℕ) : Prop :=
-  ∀ (f : Fin (n + 2) → κ), Function.Injective f → (⋂ i, v (f i)) = ∅
 
- def HasOrderLE {κ : Type*} (v : κ → Set X) (n : ℕ) : Prop :=
+def HasOrderLE {κ : Type*} (v : κ → Set X) (n : ℕ) : Prop :=
   ∀ s : Finset κ,
     s.card = n + 2 →
     (⋂ k ∈ (↑s : Set κ), v k) = ∅
+
+def HasOrderLE_Strict {κ : Type*} (v : κ → Set X) (n : ℕ) : Prop :=
+∀ f : ℕ → κ, Function.Injective f → (⋂ k < n + 2, v (f k)) = ∅
+
 
 def Refines {ι : Type*}
   {κ : Type*} (v : κ → Set X)
