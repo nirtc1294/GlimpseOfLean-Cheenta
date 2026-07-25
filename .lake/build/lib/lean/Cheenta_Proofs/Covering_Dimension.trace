@@ -1,8 +1,8 @@
 {"synthetic": false,
  "schemaVersion": "2025-09-10",
  "outputs":
- {"o": ["83abe1c2b0ab512f.olean"],
-  "i": "b90e8a93cd33757f.ilean",
+ {"o": ["0c43a69325303aa1.olean"],
+  "i": "65ee48c97e60d479.ilean",
   "c": "8c08d4ef48d8b56b.c"},
  "log":
  [{"message":
@@ -30,7 +30,7 @@
         ["Cheenta_Proofs.BasicLemmasforCD transitive imports (legacy)",
          "bea92d0f82afd7c0"],
         ["Cheenta_Proofs.BasicLemmasforCD:importAllArts",
-         "dab94ac7ec6980c4"]]]]],
+         "961cdcab0e0e9627"]]]]],
     ["libs",
      [["import dynlibs", "00000000000006bb"],
       ["package external libraries", "00000000000006bb"],
@@ -39,9 +39,9 @@
   ["Lean 4.27.0, commit db93fe1608548721853390a10cd40580fe7d22ae",
    "9a2be90fd35343e5"],
   ["C:\\Users\\niran\\Desktop\\GlimpseOfLean-Cheenta\\Cheenta_Proofs\\Covering_Dimension.lean",
-   "4077058dce625163"],
+   "6ddf7dff570c18bc"],
   ["options",
    [["-Dpp.unicode.fun=true", "9b94070140457fab"],
     ["-DautoImplicit=true", "ce2576f7641d928a"]]],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "3d5dd105ba24c547"}
+ "depHash": "d108a81d136af7b0"}

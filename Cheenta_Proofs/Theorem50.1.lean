@@ -15,16 +15,13 @@ Authors : Adhiraj Anand, Niranjan Rao, Parum Sarda, Shravas Matta, Shreesh Nayak
 
 public section
 open Set
-variable {X : Type u} [TopologicalSpace X]
-
 universe v
-
 variable {X : Type u} [TopologicalSpace X]
 
 theorem subspaceOfDimension
-  {Y : Set X} (hY : IsClosed Y) {n : ℕ} (hdim : Covering_Dimension.{u, v} (X := X) n) :
-  Covering_Dimension.{u, v} (X := ↥Y) n := by
-  unfold Covering_Dimension
+  {Y : Set X} (hY : IsClosed Y) {n : ℕ} (hdim : Covering_Dimension_Strict.{u, v} (X := X) n) :
+  Covering_Dimension_Strict.{u, v} (X := ↥Y) n := by
+  unfold Covering_Dimension_Strict
   intro ι u hu
   choose U hU_open hU_eq using fun i => isOpen_induced_iff.mp (u i).isOpen
 

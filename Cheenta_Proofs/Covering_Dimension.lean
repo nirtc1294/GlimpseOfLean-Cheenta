@@ -24,8 +24,6 @@ def Covering_Dimension {X : Type u} [TopologicalSpace X] (n : ℕ) : Prop :=
       Refines (fun k => (v k : Set X)) (fun i => (u i : Set X)) ∧
       HasOrderLE (fun k => (v k : Set X)) n
 
-
-
 def Covering_Dimension_Strict (n : ℕ) : Prop :=
   ∀ (m : ℕ) (u : {i : ℕ // i < m} → TopologicalSpace.Opens X),
     TopologicalSpace.IsOpenCover u →
