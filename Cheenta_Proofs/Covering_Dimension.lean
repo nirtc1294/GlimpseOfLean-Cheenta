@@ -33,3 +33,11 @@ def Covering_Dimension_Strict (n : ℕ) : Prop :=
     TopologicalSpace.IsOpenCover v ∧
     Refines (fun j => (v j : Set X)) (fun i => (u i : Set X)) ∧
     HasOrderLE_Strict (fun j => (v j : Set X)) n
+
+def CoveringDimensionLE (n : ℕ) : Prop :=
+  ∀ {ι : Type*} (u : ι → TopologicalSpace.Opens X),
+    (iSup u = ⊤) → -- IsOpenCover u
+    ∃ (κ : Type*) (v : κ → TopologicalSpace.Opens X),
+      (iSup v = ⊤) ∧
+      (∀ j, ∃ i, (v j : Set X) ⊆ (u i : Set X)) ∧ -- Refines v u
+      HasOrderLE (fun j => (v j : Set X)) n
