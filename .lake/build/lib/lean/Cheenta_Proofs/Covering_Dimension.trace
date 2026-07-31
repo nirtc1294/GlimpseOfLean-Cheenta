@@ -1,8 +1,8 @@
 {"synthetic": false,
  "schemaVersion": "2025-09-10",
  "outputs":
- {"o": ["83a0317e178d53fd.olean"],
-  "i": "da0c9d8fb2684c16.ilean",
+ {"o": ["69245612aff745be.olean"],
+  "i": "1bb514a74afaa99e.ilean",
   "c": "8c08d4ef48d8b56b.c"},
  "log":
  [{"message":
@@ -39,9 +39,9 @@
   ["Lean 4.27.0, commit db93fe1608548721853390a10cd40580fe7d22ae",
    "9a2be90fd35343e5"],
   ["C:\\Users\\niran\\Desktop\\GlimpseOfLean-Cheenta\\Cheenta_Proofs\\Covering_Dimension.lean",
-   "43ca02f1d52842d2"],
+   "289cb4e1e568e3c8"],
   ["options",
    [["-Dpp.unicode.fun=true", "9b94070140457fab"],
     ["-DautoImplicit=true", "ce2576f7641d928a"]]],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "dc37c9b55378dd32"}
+ "depHash": "a855619e52104d64"}

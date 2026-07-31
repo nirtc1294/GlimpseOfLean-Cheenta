@@ -50,7 +50,7 @@ theorem subspaceOfDimension
       · exact ⟨Classical.choice hι, fun y hy => (hj hy y.prop).elim⟩
       · rename_i i
         exact ⟨i, fun y hy => (Set.ext_iff.mp (hU_eq i) y).mp (hj hy)⟩
-    have ho : HasOrderLE (fun k => (V_Y k : Set ↥Y)) n := by
+    have ho : HasOrderLE_Strict (fun k => (V_Y k : Set ↥Y)) n := by
       intro f hf
       ext ⟨y, hy⟩
       simpa [Set.mem_iInter] using Set.ext_iff.mp (hv_ord f hf) y
@@ -62,5 +62,5 @@ theorem subspaceOfDimension
       exact hι ⟨i⟩⟩
     have hc : iSup (fun (_ : PEmpty) => (⊥ : TopologicalSpace.Opens ↥Y)) = ⊤ := by ext y; exact (hYa.false y).elim
     have hr : ∀ (j : PEmpty), ∃ i, ((⊥ : TopologicalSpace.Opens ↥Y) : Set ↥Y) ⊆ (u i : Set ↥Y) := fun j => j.elim
-    have ho : HasOrderLE (fun (j : PEmpty) => ((⊥ : TopologicalSpace.Opens ↥Y) : Set ↥Y)) n := by intro f hf; ext y; exact (hYa.false y).elim
+    have ho : HasOrderLE_Strict (fun (j : PEmpty) => ((⊥ : TopologicalSpace.Opens ↥Y) : Set ↥Y)) n := by intro f hf; ext y; exact (hYa.false y).elim
     exact ⟨PEmpty, fun _ => ⊥, hc, hr, ho⟩

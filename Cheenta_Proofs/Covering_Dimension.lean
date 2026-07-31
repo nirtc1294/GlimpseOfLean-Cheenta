@@ -40,4 +40,4 @@ def CoveringDimensionLE (n : ℕ) : Prop :=
     ∃ (κ : Type*) (v : κ → TopologicalSpace.Opens X),
       (iSup v = ⊤) ∧
       (∀ j, ∃ i, (v j : Set X) ⊆ (u i : Set X)) ∧ -- Refines v u
-      HasOrderLE (fun j => (v j : Set X)) n
+      HasOrderLE_Strict (fun j => (v j : Set X)) n
