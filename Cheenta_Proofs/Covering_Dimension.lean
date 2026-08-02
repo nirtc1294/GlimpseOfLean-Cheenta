@@ -34,10 +34,24 @@ def Covering_Dimension_Strict (n : ℕ) : Prop :=
     Refines (fun j => (v j : Set X)) (fun i => (u i : Set X)) ∧
     HasOrderLE_Strict (fun j => (v j : Set X)) n
 
-def CoveringDimensionLE (n : ℕ) : Prop :=
+def CoveringDimensionLE (n : ℕ) : Prop := --niranjan's
   ∀ {ι : Type*} (u : ι → TopologicalSpace.Opens X),
-    (iSup u = ⊤) → -- IsOpenCover u
+    (iSup u = ⊤) → -- IsOpenCover
     ∃ (κ : Type*) (v : κ → TopologicalSpace.Opens X),
       (iSup v = ⊤) ∧
       (∀ j, ∃ i, (v j : Set X) ⊆ (u i : Set X)) ∧ -- Refines v u
-      HasOrderLE_Strict (fun j => (v j : Set X)) n
+      HasOrderLE (fun j => (v j : Set X)) n
+
+-- niranjan, your thing is a form of the isopencover that we defined. i made another one with the mathlib one.
+-- also i used refines as it is in this one.
+
+
+def CoveringDimensionLE_2 (n : ℕ) : Prop := -- shravas's
+  ∀ {ι : Type*} (u : ι → TopologicalSpace.Opens X), TopologicalSpace.IsOpenCover u →
+    ∃ (κ : Type*) (w : κ → TopologicalSpace.Opens X),
+      TopologicalSpace.IsOpenCover w ∧
+      Refines (fun k => (w k : Set X)) (fun i => (u i : Set X)) ∧
+      HasOrderLE (fun k => (w k : Set X)) n
+
+
+--if anyone finds this, please verify both and tell me which you prefer.
