@@ -24,13 +24,9 @@ def multiplicity
 
 
 def HasOrderLE {κ : Type*} (v : κ → Set X) (n : ℕ) : Prop :=
-  ∀ s : Finset κ,
+  ∀ s : Finset κ, -- Finset is REQUIRED here
     s.card = n + 2 →
     (⋂ k ∈ (↑s : Set κ), v k) = ∅
-
-def HasOrderLE_Strict {κ : Type*} (v : κ → Set X) (n : ℕ) : Prop :=
-∀ f : ℕ → κ, Function.Injective f → (⋂ k < n + 2, v (f k)) = ∅
-
 
 def Refines {ι : Type*}
   {κ : Type*} (v : κ → Set X)
