@@ -1,12 +1,12 @@
 {"synthetic": false,
  "schemaVersion": "2025-09-10",
  "outputs":
- {"o": ["6e222900ebb20ddc.olean"],
-  "i": "83563d853f9e2d33.ilean",
+ {"o": ["a87b05baffda3130.olean"],
+  "i": "b892c6d0bcf17536.ilean",
   "c": "195d01efbc7dfdb8.c"},
  "log":
  [{"message":
-   ".> LEAN_PATH=C:\\Users\\HP\\Desktop\\Lean4\\GlimpseOfLean-Cheenta\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;C:\\Users\\HP\\Desktop\\Lean4\\GlimpseOfLean-Cheenta\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;C:\\Users\\HP\\Desktop\\Lean4\\GlimpseOfLean-Cheenta\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean;C:\\Users\\HP\\Desktop\\Lean4\\GlimpseOfLean-Cheenta\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;C:\\Users\\HP\\Desktop\\Lean4\\GlimpseOfLean-Cheenta\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;C:\\Users\\HP\\Desktop\\Lean4\\GlimpseOfLean-Cheenta\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;C:\\Users\\HP\\Desktop\\Lean4\\GlimpseOfLean-Cheenta\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;C:\\Users\\HP\\Desktop\\Lean4\\GlimpseOfLean-Cheenta\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;C:\\Users\\HP\\Desktop\\Lean4\\GlimpseOfLean-Cheenta\\.lake\\packages\\mathlib\\.lake\\build\\lib\\lean;C:\\Users\\HP\\Desktop\\Lean4\\GlimpseOfLean-Cheenta\\.lake\\build\\lib\\lean c:\\Users\\HP\\.elan\\toolchains\\leanprover--lean4---v4.27.0\\bin\\lean.exe C:\\Users\\HP\\Desktop\\Lean4\\GlimpseOfLean-Cheenta\\Cheenta_Proofs\\BasicLemmasforCD.lean -o C:\\Users\\HP\\Desktop\\Lean4\\GlimpseOfLean-Cheenta\\.lake\\build\\lib\\lean\\Cheenta_Proofs\\BasicLemmasforCD.olean -i C:\\Users\\HP\\Desktop\\Lean4\\GlimpseOfLean-Cheenta\\.lake\\build\\lib\\lean\\Cheenta_Proofs\\BasicLemmasforCD.ilean -c C:\\Users\\HP\\Desktop\\Lean4\\GlimpseOfLean-Cheenta\\.lake\\build\\ir\\Cheenta_Proofs\\BasicLemmasforCD.c --setup C:\\Users\\HP\\Desktop\\Lean4\\GlimpseOfLean-Cheenta\\.lake\\build\\ir\\Cheenta_Proofs\\BasicLemmasforCD.setup.json --json",
+   ".> LEAN_PATH=C:\\Users\\niran\\Desktop\\GlimpseOfLean-Cheenta\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;C:\\Users\\niran\\Desktop\\GlimpseOfLean-Cheenta\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;C:\\Users\\niran\\Desktop\\GlimpseOfLean-Cheenta\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean;C:\\Users\\niran\\Desktop\\GlimpseOfLean-Cheenta\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;C:\\Users\\niran\\Desktop\\GlimpseOfLean-Cheenta\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;C:\\Users\\niran\\Desktop\\GlimpseOfLean-Cheenta\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;C:\\Users\\niran\\Desktop\\GlimpseOfLean-Cheenta\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;C:\\Users\\niran\\Desktop\\GlimpseOfLean-Cheenta\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;C:\\Users\\niran\\Desktop\\GlimpseOfLean-Cheenta\\.lake\\packages\\mathlib\\.lake\\build\\lib\\lean;C:\\Users\\niran\\Desktop\\GlimpseOfLean-Cheenta\\.lake\\build\\lib\\lean c:\\Users\\niran\\.elan\\toolchains\\leanprover--lean4---v4.27.0\\bin\\lean.exe C:\\Users\\niran\\Desktop\\GlimpseOfLean-Cheenta\\Cheenta_Proofs\\BasicLemmasforCD.lean -o C:\\Users\\niran\\Desktop\\GlimpseOfLean-Cheenta\\.lake\\build\\lib\\lean\\Cheenta_Proofs\\BasicLemmasforCD.olean -i C:\\Users\\niran\\Desktop\\GlimpseOfLean-Cheenta\\.lake\\build\\lib\\lean\\Cheenta_Proofs\\BasicLemmasforCD.ilean -c C:\\Users\\niran\\Desktop\\GlimpseOfLean-Cheenta\\.lake\\build\\ir\\Cheenta_Proofs\\BasicLemmasforCD.c --setup C:\\Users\\niran\\Desktop\\GlimpseOfLean-Cheenta\\.lake\\build\\ir\\Cheenta_Proofs\\BasicLemmasforCD.setup.json --json",
    "level": "trace"}],
  "inputs":
  [["Cheenta_Proofs.BasicLemmasforCD:deps",
@@ -45,10 +45,10 @@
       ["module plugins", "00000000000006bb"]]]]],
   ["Lean 4.27.0, commit db93fe1608548721853390a10cd40580fe7d22ae",
    "9a2be90fd35343e5"],
-  ["C:\\Users\\HP\\Desktop\\Lean4\\GlimpseOfLean-Cheenta\\Cheenta_Proofs\\BasicLemmasforCD.lean",
-   "e4540338088c9fe6"],
+  ["C:\\Users\\niran\\Desktop\\GlimpseOfLean-Cheenta\\Cheenta_Proofs\\BasicLemmasforCD.lean",
+   "2185869bd2aa8f71"],
   ["options",
    [["-Dpp.unicode.fun=true", "9b94070140457fab"],
     ["-DautoImplicit=true", "ce2576f7641d928a"]]],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "9402fb94624c758e"}
+ "depHash": "cec0102ddbf42d49"}

@@ -16,7 +16,7 @@ universe u w
 
 variable {X : Type u} [TopologicalSpace X]
 
-def CoveringDimensionLE_2 (n : ℕ) : Prop :=
+def CoveringDimensionLE (n : ℕ) : Prop :=
   ∀ {ι : Type*} (u : ι → TopologicalSpace.Opens X), TopologicalSpace.IsOpenCover u →
     ∃ (κ : Type*) (w : κ → TopologicalSpace.Opens X),
       TopologicalSpace.IsOpenCover w ∧
