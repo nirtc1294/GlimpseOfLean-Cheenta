@@ -40,7 +40,7 @@ def CoveringDimensionLE (n : ℕ) : Prop := --niranjan's
     ∃ (κ : Type*) (v : κ → TopologicalSpace.Opens X),
       (iSup v = ⊤) ∧
       (∀ j, ∃ i, (v j : Set X) ⊆ (u i : Set X)) ∧ -- Refines v u
-      HasOrderLE (fun j => (v j : Set X)) n
+      HasOrderLE_Strict (fun j => (v j : Set X)) n
 
 -- niranjan, your thing is a form of the isopencover that we defined. i made another one with the mathlib one.
 -- also i used refines as it is in this one.
