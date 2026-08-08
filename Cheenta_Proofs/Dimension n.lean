@@ -8,8 +8,11 @@ import Mathlib.Topology.Sets.OpenCover
 variable {X : Type}[TopologicalSpace X]
 
 def DimLe (S : Set X) : ℕ → Prop
-  | 0 => ∀ {ι : Type} (C : ι → Set X), TopologicalSpace.IsOpenCover C →
-      ∃ (κ : Type) (D : κ → Set X), TopologicalSpace.IsOpenCover D ∧ Refines D C ∧ HasOrderLE D 0
+  | 0 => ∀ {ι : Type} (C : ι → TopologicalSpace.Opens X), TopologicalSpace.IsOpenCover C →
+      ∃ (κ : Type) (D : κ → TopologicalSpace.Opens X),
+        TopologicalSpace.IsOpenCover D ∧
+        Refines (fun i => (D i : Set X)) (fun i => (C i : Set X)) ∧
+        HasOrderLE (fun i => (D i : Set X)) 0
   | n + 1 => ∃ A B : Set X, S = A ∪ B ∧ DimLe A 0 ∧ DimLe B n
 
 lemma dimLe_succ_split {S : Set X} {n : ℕ} :
