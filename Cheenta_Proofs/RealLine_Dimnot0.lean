@@ -22,11 +22,11 @@ variable {X : Type u} [TopologicalSpace X]
 
 open Set Topology
 
-lemma real_not_dim0 : ¬ Covering_Dimension (X := ℝ) 0 := by
+theorem real_not_dim0 : ¬ CoveringDimensionLE (X := ℝ) 0 := by
   intro h
   classical
   let u : Fin 2 → Set ℝ := fun i => if i = 0 then Set.Iio 1 else Set.Ioi 0
-  have hu : IsOpenCover u := by
+  have hu : TopologicalSpace.IsOpenCover u := by
     constructor
     · intro i
       show IsOpen (if i = 0 then Set.Iio (1:ℝ) else Set.Ioi 0)
