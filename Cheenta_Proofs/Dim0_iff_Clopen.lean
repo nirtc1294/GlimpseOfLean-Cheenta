@@ -19,7 +19,7 @@ variable {X : Type u} [TopologicalSpace X]
 
 /-- Main Theorem: Covering dimension ≤ 0 is equivalent to every open cover
     admitting a refinement that is a clopen partition. -/
-theorem coveringDimensionLE_zero_iff_clopen_refinement_simpler
+theorem Dim0_iff_clopen_refinement
     [Nonempty X] [T1Space X] [NormalSpace X] :
     (∀ (ι : Type v)
         (u : ι → TopologicalSpace.Opens X),

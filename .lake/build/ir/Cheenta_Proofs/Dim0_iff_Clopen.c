@@ -1,6 +1,6 @@
 // Lean compiler output
 // Module: Cheenta_Proofs.Dim0_iff_Clopen
-// Imports: public import Init public import Mathlib.Data.Option.Basic public import Mathlib.Topology.Separation.Regular public import Mathlib.Topology.Basic public import Mathlib.Topology.Constructions public import Cheenta_Proofs.BasicLemmasforCD
+// Imports: public import Init public import Mathlib.Topology.Basic public import Mathlib.Topology.Separation.Regular public import Mathlib.Topology.Compactness.Paracompact public import Mathlib.Topology.Sets.OpenCover public import Mathlib.Topology.Connected.Clopen public import Cheenta_Proofs.BasicLemmasforCD public import Cheenta_Proofs.Covering_Dimension
 #include <lean/lean.h>
 #if defined(__clang__)
 #pragma clang diagnostic ignored "-Wunused-parameter"
@@ -14,11 +14,13 @@
 extern "C" {
 #endif
 lean_object* initialize_Init(uint8_t builtin);
-lean_object* initialize_mathlib_Mathlib_Data_Option_Basic(uint8_t builtin);
-lean_object* initialize_mathlib_Mathlib_Topology_Separation_Regular(uint8_t builtin);
 lean_object* initialize_mathlib_Mathlib_Topology_Basic(uint8_t builtin);
-lean_object* initialize_mathlib_Mathlib_Topology_Constructions(uint8_t builtin);
+lean_object* initialize_mathlib_Mathlib_Topology_Separation_Regular(uint8_t builtin);
+lean_object* initialize_mathlib_Mathlib_Topology_Compactness_Paracompact(uint8_t builtin);
+lean_object* initialize_mathlib_Mathlib_Topology_Sets_OpenCover(uint8_t builtin);
+lean_object* initialize_mathlib_Mathlib_Topology_Connected_Clopen(uint8_t builtin);
 lean_object* initialize_glimpseOfLean_Cheenta__Proofs_BasicLemmasforCD(uint8_t builtin);
+lean_object* initialize_glimpseOfLean_Cheenta__Proofs_Covering__Dimension(uint8_t builtin);
 static bool _G_initialized = false;
 LEAN_EXPORT lean_object* initialize_glimpseOfLean_Cheenta__Proofs_Dim0__iff__Clopen(uint8_t builtin) {
 lean_object * res;
@@ -27,19 +29,25 @@ _G_initialized = true;
 res = initialize_Init(builtin);
 if (lean_io_result_is_error(res)) return res;
 lean_dec_ref(res);
-res = initialize_mathlib_Mathlib_Data_Option_Basic(builtin);
+res = initialize_mathlib_Mathlib_Topology_Basic(builtin);
 if (lean_io_result_is_error(res)) return res;
 lean_dec_ref(res);
 res = initialize_mathlib_Mathlib_Topology_Separation_Regular(builtin);
 if (lean_io_result_is_error(res)) return res;
 lean_dec_ref(res);
-res = initialize_mathlib_Mathlib_Topology_Basic(builtin);
+res = initialize_mathlib_Mathlib_Topology_Compactness_Paracompact(builtin);
 if (lean_io_result_is_error(res)) return res;
 lean_dec_ref(res);
-res = initialize_mathlib_Mathlib_Topology_Constructions(builtin);
+res = initialize_mathlib_Mathlib_Topology_Sets_OpenCover(builtin);
+if (lean_io_result_is_error(res)) return res;
+lean_dec_ref(res);
+res = initialize_mathlib_Mathlib_Topology_Connected_Clopen(builtin);
 if (lean_io_result_is_error(res)) return res;
 lean_dec_ref(res);
 res = initialize_glimpseOfLean_Cheenta__Proofs_BasicLemmasforCD(builtin);
+if (lean_io_result_is_error(res)) return res;
+lean_dec_ref(res);
+res = initialize_glimpseOfLean_Cheenta__Proofs_Covering__Dimension(builtin);
 if (lean_io_result_is_error(res)) return res;
 lean_dec_ref(res);
 return lean_io_result_mk_ok(lean_box(0));
