@@ -5,20 +5,14 @@ import Mathlib.Topology.Sets.OpenCover
 import Mathlib.Topology.Connected.Clopen
 import Cheenta_Proofs.BasicLemmasforCD
 import Cheenta_Proofs.Covering_Dimension
-
 /-
 Copyright (c) 2026 Cheenta Lean Project. All rights reserved.
 Authors : Adhiraj Anand, Niranjan Rao, Parum Sarda, Shravas Matta, Shreesh Nayak, Shreya Iyer
 -/
-
 open Set Topology
-
 universe u v w u' κu
-
 variable {X : Type u} [TopologicalSpace X]
 
-/-- Main Theorem: Covering dimension ≤ 0 is equivalent to every open cover
-    admitting a refinement that is a clopen partition. -/
 theorem Dim0_iff_clopen_refinement
     [Nonempty X] [T1Space X] [NormalSpace X] :
     (∀ (ι : Type v)
@@ -39,11 +33,9 @@ theorem Dim0_iff_clopen_refinement
           Pairwise (fun i j => Disjoint (c i) (c j)) ∧
           Refines c (fun i => ((U i : Set X))) := by
   constructor
-  · -- Forward Direction: CoveringDimensionLE 0 → Clopen Refinement
-    intro h_dim ι U hu
+  · intro h_dim ι U hu
     rcases h_dim ι U hu with ⟨κ : Type κu, w', hw_cover, hw_ref, hw_order⟩
     letI : DecidableEq κ := Classical.decEq κ
-
     have hw_disj : Pairwise (fun i j => Disjoint (w' i : Set X) (w' j : Set X)) := by
       intro i j hij
       rw [Set.disjoint_iff_inter_eq_empty]
@@ -60,7 +52,6 @@ theorem Dim0_iff_clopen_refinement
         · exact hxj
       rw [hw_order {i, j} hcard] at hx_inter
       exact (Set.mem_empty_iff_false x).mp hx_inter
-
     have hw_cover_univ : ⋃ i, (w' i : Set X) = univ := hw_cover.iSup_set_eq_univ
     refine ⟨κ, fun k => (w' k : Set X), ?_, hw_cover_univ, hw_disj, hw_ref⟩
     intro k
@@ -87,17 +78,13 @@ theorem Dim0_iff_clopen_refinement
         exact (Set.mem_empty_iff_false x).mp h_in
     rw [h_compl]
     exact isOpen_iUnion (fun j => (w' j.val).isOpen)
-
-  · -- Backward Direction: Clopen Refinement → CoveringDimensionLE 0
-    intro h_clopen ι U hu
+  · intro h_clopen ι U hu
     rcases h_clopen ι U hu with ⟨κ : Type κu, c, hc_clopen, hc_univ, hc_disj, hc_ref⟩
     letI : DecidableEq κ := Classical.decEq κ
-
     have hc_cov : TopologicalSpace.IsOpenCover (fun k => ⟨c k, (hc_clopen k).2⟩ : κ → TopologicalSpace.Opens X) := by
       classical
       have hc_union : ⋃ k, c k = univ := hc_univ
       exact TopologicalSpace.IsOpenCover.of_sets (fun k => (hc_clopen k).2) hc_union
-
     refine ⟨κ, fun k => ⟨c k, (hc_clopen k).2⟩, hc_cov, hc_ref, ?_⟩
     intro s hs
     have h2 : s.card = 2 := by rwa [zero_add] at hs
