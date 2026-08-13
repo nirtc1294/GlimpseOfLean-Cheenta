@@ -19,7 +19,6 @@ lemma dimLe_succ_split {S : Set X} {n : ℕ} :
   DimLe S (n + 1) ↔ ∃ A B : Set X, S = A ∪ B ∧ DimLe A 0 ∧ DimLe B n := by
   rw [DimLe]
 
-
 lemma dimension_decomposition_set (S : Set X) (n : ℕ) :
   DimLe S n ↔ ∃ Xs : ℕ → Set X, S = (⋃ i ≤ n, Xs i) ∧ ∀ i ≤ n, DimLe (Xs i) 0 := by
   induction n generalizing S with
