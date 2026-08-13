@@ -82,7 +82,6 @@ lemma dimension_decomposition_set (S : Set X) (n : ℕ) :
         · exact ⟨0, by omega, hx⟩
         · exact ⟨j + 1, by omega, hx⟩
 
-
 theorem dimension_decomposition (n : ℕ) :
   DimLe (Set.univ : Set X) n ↔ ∃ Xs : ℕ → Set X,
   Set.univ = (⋃ i ≤ n, Xs i) ∧ ∀ i ≤ n, DimLe (Xs i) 0 :=
