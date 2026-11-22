@@ -28,9 +28,9 @@
          "5445c59ac9a6352f"],
         ["Mathlib.Topology.Sets.OpenCover:importAllArts", "e2bd41161bd86521"],
         ["Cheenta_Proofs.BasicLemmasforCD transitive imports (legacy)",
-         "bea92d0f82afd7c0"],
+         "06570c02d4061ec8"],
         ["Cheenta_Proofs.BasicLemmasforCD:importAllArts",
-         "281f30d14861e555"]]]]],
+         "1996a1659eb8b68e"]]]]],
     ["libs",
      [["import dynlibs", "00000000000006bb"],
       ["package external libraries", "00000000000006bb"],
@@ -44,4 +44,4 @@
    [["-Dpp.unicode.fun=true", "9b94070140457fab"],
     ["-DautoImplicit=true", "ce2576f7641d928a"]]],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "cc05d229a735bf8b"}
+ "depHash": "30b6695648971841"}

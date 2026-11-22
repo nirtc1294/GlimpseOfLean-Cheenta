@@ -1,8 +1,8 @@
 {"synthetic": false,
  "schemaVersion": "2025-09-10",
  "outputs":
- {"o": ["ae3ab3c5f64b7813.olean"],
-  "i": "e05b59465c07fd3b.ilean",
+ {"o": ["a1ecd67989bbada9.olean"],
+  "i": "6253f5ebcaaa5580.ilean",
   "c": "1844dba169621f36.c"},
  "log":
  [{"message":
@@ -32,10 +32,10 @@
          "77674ad6cad622e8"],
         ["Mathlib.Topology.Connected.Clopen:importAllArts", "3ba15fbd8163c09f"],
         ["Cheenta_Proofs.BasicLemmasforCD transitive imports (legacy)",
-         "bea92d0f82afd7c0"],
-        ["Cheenta_Proofs.BasicLemmasforCD:importAllArts", "281f30d14861e555"],
+         "06570c02d4061ec8"],
+        ["Cheenta_Proofs.BasicLemmasforCD:importAllArts", "1996a1659eb8b68e"],
         ["Cheenta_Proofs.Covering_Dimension transitive imports (legacy)",
-         "1c868b934b33bce8"],
+         "a306c5962c77341e"],
         ["Cheenta_Proofs.Covering_Dimension:importAllArts",
          "f4d8c97bf87a37b7"]]]]],
     ["libs",
@@ -46,9 +46,9 @@
   ["Lean 4.27.0, commit db93fe1608548721853390a10cd40580fe7d22ae",
    "9a2be90fd35343e5"],
   ["C:\\Users\\niran\\Desktop\\GlimpseOfLean-Cheenta\\Cheenta_Proofs\\Dim0_iff_Clopen.lean",
-   "fa7642deb997c8ae"],
+   "94209b35e7a8e35f"],
   ["options",
    [["-Dpp.unicode.fun=true", "9b94070140457fab"],
     ["-DautoImplicit=true", "ce2576f7641d928a"]]],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "d7fe41e251608fd1"}
+ "depHash": "7dcbd0bfcb24de7b"}

@@ -13,8 +13,7 @@ open Set Topology
 universe u v w u' κu
 variable {X : Type u} [TopologicalSpace X]
 
-theorem Dim0_iff_clopen_refinement
-    [Nonempty X] [T1Space X] [NormalSpace X] :
+theorem Dim0_iff_clopen_refinement:
     (∀ (ι : Type v)
         (u : ι → TopologicalSpace.Opens X),
         TopologicalSpace.IsOpenCover u →
